@@ -1,8 +1,8 @@
 var crypto = require('crypto');
 
-function cryptowrapper(appConfig){
-	var key = appConfig.App.Crypto.Key;
-	var iv = appConfig.App.Crypto.IV;
+function cryptowrapper(config){
+	var key = config.Key;
+	var iv = config.IV;
 	var cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
 	var decipher = crypto.createDecipheriv('aes-128-cbc', key, iv);
 	
